@@ -4,7 +4,7 @@
 #
 Name     : R-survey
 Version  : 3.33.2
-Release  : 8
+Release  : 9
 URL      : https://cran.r-project.org/src/contrib/survey_3.33-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/survey_3.33-2.tar.gz
 Summary  : Analysis of Complex Survey Samples
