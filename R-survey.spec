@@ -4,15 +4,12 @@
 #
 Name     : R-survey
 Version  : 3.35.1
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/survey_3.35-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/survey_3.35-1.tar.gz
 Summary  : Analysis of Complex Survey Samples
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
-Requires: R-RSQLite
-Requires: R-minqa
-Requires: R-numDeriv
 BuildRequires : R-RSQLite
 BuildRequires : R-minqa
 BuildRequires : R-numDeriv
@@ -30,10 +27,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1548782542
+export SOURCE_DATE_EPOCH=1552846882
 
 %install
-export SOURCE_DATE_EPOCH=1548782542
+export SOURCE_DATE_EPOCH=1552846882
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -69,8 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library survey|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  survey || :
 
 
 %files
@@ -132,5 +128,66 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/survey/html/00Index.html
 /usr/lib64/R/library/survey/html/R.css
 /usr/lib64/R/library/survey/porting.to.S
+/usr/lib64/R/library/survey/tests/3stage2phase.R
+/usr/lib64/R/library/survey/tests/DBIcheck.R
+/usr/lib64/R/library/survey/tests/README
+/usr/lib64/R/library/survey/tests/api.R
+/usr/lib64/R/library/survey/tests/badcal.R
+/usr/lib64/R/library/survey/tests/badcal.Rout.save
+/usr/lib64/R/library/survey/tests/bycovmat.R
+/usr/lib64/R/library/survey/tests/caleg.R
+/usr/lib64/R/library/survey/tests/caleg.Rout.save
+/usr/lib64/R/library/survey/tests/check.R
+/usr/lib64/R/library/survey/tests/check.Rout.save
+/usr/lib64/R/library/survey/tests/deff.R
+/usr/lib64/R/library/survey/tests/deff.Rout.save
+/usr/lib64/R/library/survey/tests/domain.R
+/usr/lib64/R/library/survey/tests/domain.Rout.save
+/usr/lib64/R/library/survey/tests/fpc.R
+/usr/lib64/R/library/survey/tests/glm-scoping.R
+/usr/lib64/R/library/survey/tests/kalton.R
+/usr/lib64/R/library/survey/tests/kalton.Rout.save
+/usr/lib64/R/library/survey/tests/lonely.psu.R
+/usr/lib64/R/library/survey/tests/lonely.psu.Rout.save
+/usr/lib64/R/library/survey/tests/multistage.R
+/usr/lib64/R/library/survey/tests/nwtco-subcohort.rda
+/usr/lib64/R/library/survey/tests/nwts-cch.R
+/usr/lib64/R/library/survey/tests/nwts.R
+/usr/lib64/R/library/survey/tests/nwts.Rout.save
+/usr/lib64/R/library/survey/tests/nwts.rda
+/usr/lib64/R/library/survey/tests/pps.R
+/usr/lib64/R/library/survey/tests/quantile.R
+/usr/lib64/R/library/survey/tests/quantile.Rout.save
+/usr/lib64/R/library/survey/tests/rakecheck.R
+/usr/lib64/R/library/survey/tests/rakecheck.Rout.save
+/usr/lib64/R/library/survey/tests/raowuboot.R
+/usr/lib64/R/library/survey/tests/raowuboot.Rout.save
+/usr/lib64/R/library/survey/tests/regpredict.R
+/usr/lib64/R/library/survey/tests/regpredict.Rout.save
+/usr/lib64/R/library/survey/tests/scoping.R
+/usr/lib64/R/library/survey/tests/simdata1.RData
+/usr/lib64/R/library/survey/tests/survcurve.R
+/usr/lib64/R/library/survey/tests/survcurve.Rout.save
+/usr/lib64/R/library/survey/tests/testoutput/DBIcheck.R
+/usr/lib64/R/library/survey/tests/testoutput/DBIcheck.Rout.save
+/usr/lib64/R/library/survey/tests/testoutput/README
+/usr/lib64/R/library/survey/tests/testoutput/api.R
+/usr/lib64/R/library/survey/tests/testoutput/api.Rout.saved
+/usr/lib64/R/library/survey/tests/testoutput/bycovmat.R
+/usr/lib64/R/library/survey/tests/testoutput/bycovmat.Rout.save
+/usr/lib64/R/library/survey/tests/testoutput/fpc.R
+/usr/lib64/R/library/survey/tests/testoutput/fpc.Rout.save
+/usr/lib64/R/library/survey/tests/testoutput/multistage.R
+/usr/lib64/R/library/survey/tests/testoutput/multistage.Rout.save
+/usr/lib64/R/library/survey/tests/testoutput/nwtco-subcohort.rda
+/usr/lib64/R/library/survey/tests/testoutput/nwts-cch.R
+/usr/lib64/R/library/survey/tests/testoutput/nwts-cch.Rout.save
+/usr/lib64/R/library/survey/tests/testoutput/nwts.rda
+/usr/lib64/R/library/survey/tests/testoutput/pps.R
+/usr/lib64/R/library/survey/tests/testoutput/pps.Rout.save
+/usr/lib64/R/library/survey/tests/testoutput/scoping.R
+/usr/lib64/R/library/survey/tests/testoutput/scoping.Rout.save
+/usr/lib64/R/library/survey/tests/twophase.R
+/usr/lib64/R/library/survey/tests/twophase.Rout.save
 /usr/lib64/R/library/survey/twostage.pdf
 /usr/lib64/R/library/survey/ucla-examples.pdf
