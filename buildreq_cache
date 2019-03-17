@@ -1,4 +1,9 @@
 3.35.1
+R-DBI
 R-RSQLite
+R-bit64
+R-blob
+R-memoise
 R-minqa
 R-numDeriv
+R-pkgconfig
