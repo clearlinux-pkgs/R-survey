@@ -4,17 +4,12 @@
 #
 Name     : R-survey
 Version  : 3.35.1
-Release  : 19
+Release  : 20
 URL      : https://cran.r-project.org/src/contrib/survey_3.35-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/survey_3.35-1.tar.gz
 Summary  : Analysis of Complex Survey Samples
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
-Requires: R-DBI
-Requires: R-bit64
-Requires: R-blob
-Requires: R-memoise
-Requires: R-pkgconfig
 BuildRequires : R-DBI
 BuildRequires : R-RSQLite
 BuildRequires : R-bit64
@@ -37,10 +32,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552862942
+export SOURCE_DATE_EPOCH=1552931838
 
 %install
-export SOURCE_DATE_EPOCH=1552862942
+export SOURCE_DATE_EPOCH=1552931838
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
