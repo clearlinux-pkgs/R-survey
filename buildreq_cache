@@ -1,9 +1,11 @@
-3.35.1
+3.36
 R-DBI
 R-RSQLite
+R-Rcpp
 R-bit64
 R-blob
 R-memoise
 R-minqa
+R-mitools
 R-numDeriv
 R-pkgconfig
