@@ -4,7 +4,7 @@
 #
 Name     : R-survey
 Version  : 4.1.1
-Release  : 47
+Release  : 48
 URL      : https://cran.r-project.org/src/contrib/survey_4.1-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/survey_4.1-1.tar.gz
 Summary  : Analysis of Complex Survey Samples
